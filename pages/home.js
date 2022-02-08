@@ -51,7 +51,7 @@ const Home = ({ providers }) => {
 
       <main className="mx-auto flex max-w-screen-lg flex-col items-center xl:flex-row">
         <div className="space-y-6 xl:space-y-10">
-          <h1 className="max-w-xl pl-4 text-3xl font-semibold !leading-snug text-amber-800/80 md:text-5xl xl:pl-0">
+          <h1 className="max-w-xl pl-4 text-3xl font-extralight !leading-snug text-amber-800/80 md:text-5xl xl:pl-0">
             Welcome to your professional community
           </h1>
           <div className="space-y-4">
