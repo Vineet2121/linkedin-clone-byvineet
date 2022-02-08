@@ -11,14 +11,14 @@ import { getProviders, signIn } from "next-auth/react";
 
 const Home = ({ providers }) => {
   return (
-    <div className="space-y-10 relative">
+    <div className="relative space-y-10">
       <Head>
         <title>LinkedIn</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="flex justify-around items-center py-4">
-        <div className="relative w-36 h-10">
+      <header className="flex items-center justify-around py-4">
+        <div className="relative h-10 w-36">
           <Image
             src="/images/linked-in-logo.svg"
             alt="linked in"
@@ -27,8 +27,8 @@ const Home = ({ providers }) => {
           />
         </div>
 
-        <div className="flex items-center sm:divide-x divide-gray-300">
-          <div className="hidden sm:flex space-x-8 pr-4">
+        <div className="flex items-center divide-gray-300 sm:divide-x">
+          <div className="hidden space-x-8 pr-4 sm:flex">
             <HeaderLink Icon={ExploreIcon} text="Discover" />
             <HeaderLink Icon={GroupIcon} text="People" />
             <HeaderLink Icon={OndemandVideoSharpIcon} text="Learning" />
@@ -38,7 +38,7 @@ const Home = ({ providers }) => {
             <div key={provider.name}>
               <div className="pl-4">
                 <button
-                  className="text-blue-700 font-semibold rounded-full border border-blue-700 px-5 py-1.5 transition-all hover:border-2 hover:bg-[#81d4fa33]"
+                  className="rounded-full border border-blue-700 px-5 py-1.5 font-semibold text-blue-700 transition-all hover:border-2 hover:bg-[#81d4fa33]"
                   onClick={() => signIn(provider.id, { callbackUrl: "/" })}
                 >
                   Sign in
@@ -49,9 +49,9 @@ const Home = ({ providers }) => {
         </div>
       </header>
 
-      <main className="flex flex-col xl:flex-row items-center max-w-screen-lg mx-auto">
+      <main className="mx-auto flex max-w-screen-lg flex-col items-center xl:flex-row">
         <div className="space-y-6 xl:space-y-10">
-          <h1 className="text-3xl md:text-5xl text-amber-800/80 max-w-xl !leading-snug pl-4 xl:pl-0">
+          <h1 className="max-w-xl pl-4 text-3xl font-semibold !leading-snug text-amber-800/80 md:text-5xl xl:pl-0">
             Welcome to your professional community
           </h1>
           <div className="space-y-4">
@@ -70,7 +70,7 @@ const Home = ({ providers }) => {
           </div>
         </div>
 
-        <div className="relative xl:absolute w-80 h-80 xl:w-[650px] xl:h-[650px] top-14 right-5">
+        <div className="relative top-14 right-5 h-80 w-80 xl:absolute xl:h-[650px] xl:w-[650px]">
           <Image src="/images/hero-picture.svg" layout="fill" alt="" priority />
         </div>
       </main>
